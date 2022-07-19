@@ -50,7 +50,7 @@ Recharts
 ### Database:
 PostgreSQL
 
-## Diagram
+## Backend Class Diagram
 
 <div align="center">
 
@@ -92,7 +92,7 @@ Your local machine terminal:
 - npm install
 - npm start
 
-Your intelli J
+Your intelliJ
 
 - open MINTid/services
 - run ServicesApplication
