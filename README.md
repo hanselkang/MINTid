@@ -50,7 +50,7 @@ Recharts
 ### Database:
 PostgreSQL
 
-## Inheritance Diagram
+## Diagram
 
 <div align="center">
 
