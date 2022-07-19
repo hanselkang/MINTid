@@ -37,6 +37,8 @@ My works
 * Planned Database Structure
 * Frontend design through JavaScript and React
 * UI/UX design
+* Monthly Graph
+* Target Graph
 
 
 ## Tech stack
