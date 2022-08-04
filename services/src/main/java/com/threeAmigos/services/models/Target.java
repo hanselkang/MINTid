@@ -11,6 +11,8 @@ public class Target {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @Column(name = "target_name")
+    private String target_name;
     @Column(name = "target")
     private int target;
 
@@ -21,7 +23,8 @@ public class Target {
     @JoinColumn(name = "household_id", nullable = false)
     private Household household;
 
-    public Target(int target, LocalDate date) {
+    public Target(String target_name, int target, LocalDate date) {
+        this.target_name = target_name;
         this.target = target;
         this.date = date;
     }
@@ -52,6 +55,11 @@ public class Target {
         this.date = date;
     }
 
+    public String getTarget_name() {
+        return target_name;
+    }
 
-
+    public void setTarget_name(String target_name) {
+        this.target_name = target_name;
+    }
 }
