@@ -15,21 +15,39 @@ public class Household {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "target")
-    private int target;
+    @Column(name = "household_name")
+    private String household_name;
 
-    @Column(name = "byDate")
-    private LocalDate date;
+    @OneToMany(mappedBy = "household")
+    @JsonBackReference
+    private List<Position> net_positions;
+
+    @OneToMany(mappedBy = "household")
+    @JsonBackReference
+    private List<Target> targets;
 
     @OneToMany(mappedBy = "household")
     @JsonBackReference
     private List<Person> persons;
 
+    public String getHousehold_name() {
+        return household_name;
+    }
 
+    public void setHousehold_name(String household_name) {
+        this.household_name = household_name;
+    }
 
-    public Household(int target, LocalDate date) {
-        this.target = target;
-        this.date = date;
+    public List<Position> getNet_positions() {
+        return net_positions;
+    }
+
+    public void setNet_positions(List<Position> net_positions) {
+        this.net_positions = net_positions;
+    }
+
+    public Household(String household_name) {
+        this.household_name = household_name;
     }
 
     public Household() {
@@ -47,25 +65,10 @@ public class Household {
         this.id = id;
     }
 
-    public int getTarget() {
-        return target;
-    }
-
-    public void setTarget(int target) {
-        this.target = target;
-    }
-
     public Long getId() {
         return id;
     }
 
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
 
 //    int getTotalExpense(){
 //        int totalAmount = 0;
