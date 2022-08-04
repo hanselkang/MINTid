@@ -42,14 +42,14 @@ public class HouseholdController {
     @PutMapping("/households/{id}")
     public ResponseEntity<Household> putHousehold(@RequestBody Household newHousehold, @PathVariable Long id) {
         householdRepository.findById(id)
-                .map(target -> {
-                    target.setTarget(newHousehold.getTarget());
-                    return householdRepository.save(target);
-                })
-                .map(date -> {
-                    date.setDate(newHousehold.getDate());
-                    return householdRepository.save(date);
-                })
+//                .map(target -> {
+//                    target.setNetPosition(newHousehold.getNetPosition());
+//                    return householdRepository.save(target);
+//                })
+//                .map(date -> {
+//                    date.setDate(newHousehold.getDate());
+//                    return householdRepository.save(date);
+//                })
                 .orElseGet(() -> {
                     newHousehold.setId(id);
                     return householdRepository.save(newHousehold);
