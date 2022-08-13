@@ -23,8 +23,8 @@ public class PersonTest {
     @Before
     public void setUp() throws Exception {
         date = LocalDate.of(2023,1,2);
-//        homeSweetHome = new Household(20000,date);
-//        coupleBalance = new Household(100000,date);
+        homeSweetHome = new Household("Our Home");
+        coupleBalance = new Household("Couple Home");
 //        DOES a household actually need its current balance to be modelled? maybe it's just a calculation
         person1 = new Person("Hansel",100000,300000, homeSweetHome);
         person2 = new Person("Aelish",0,1200000, homeSweetHome);
@@ -77,14 +77,14 @@ public class PersonTest {
         assertEquals(299000,person1.getCurrentPosition());
     }
 
-//    @Test
-//    public void hasHousehold() {
-//        assertEquals(20000,person1.getHousehold().getNetPosition());
-//    }
+    @Test
+    public void hasHousehold() {
+        assertEquals("Our Home",person1.getHousehold().getHousehold_name());
+    }
 
-//    @Test
-//    public void canChangeHousehold(){
-//        person1.setHousehold(coupleBalance);
-//        assertEquals(100000,person1.getHousehold().getNetPosition());
-//    }
+    @Test
+    public void canChangeHousehold(){
+        person1.setHousehold(coupleBalance);
+        assertEquals("Couple Home",person1.getHousehold().getHousehold_name());
+    }
 }
