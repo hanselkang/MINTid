@@ -32,7 +32,7 @@ public class TargetTest {
 
     @Test
     public void getDate() {
-//        assertEquals(date1,target1);
+        assertEquals(date1,target1.getDate());
     }
 
     @Test
