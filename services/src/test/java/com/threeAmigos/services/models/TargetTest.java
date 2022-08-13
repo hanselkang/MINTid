@@ -26,10 +26,13 @@ public class TargetTest {
 
     @Test
     public void setTarget() {
+        target1.setTarget(2200000);
+        assertEquals(2200000,target1.getTarget());
     }
 
     @Test
     public void getDate() {
+//        assertEquals(date1,target1);
     }
 
     @Test
