@@ -40,5 +40,7 @@ public class PositionTest {
 
     @Test
     public void setNet_position() {
+        position1.setNet_position(210000);
+        assertEquals(210000,position1.getNet_position());
     }
 }
