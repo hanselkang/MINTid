@@ -35,6 +35,7 @@ public class PositionTest {
 
     @Test
     public void getNet_position() {
+        assertEquals(200000,position1.getNet_position());
     }
 
     @Test
