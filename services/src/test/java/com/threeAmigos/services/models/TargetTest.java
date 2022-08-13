@@ -50,5 +50,7 @@ public class TargetTest {
 
     @Test
     public void setTarget_name() {
+        target1.setTarget_name("Buy a flat");
+        assertEquals("Buy a flat",target1.getTarget_name());
     }
 }
