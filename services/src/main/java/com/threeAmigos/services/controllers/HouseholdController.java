@@ -1,15 +1,12 @@
 package com.threeAmigos.services.controllers;
 
 import com.threeAmigos.services.models.Household;
-import com.threeAmigos.services.models.Purpose;
 import com.threeAmigos.services.repositories.HouseholdRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Map;
 
 @RestController
 public class HouseholdController {
@@ -29,7 +26,7 @@ public class HouseholdController {
             @RequestParam(required = false, name = "household") Long householdId
 
     ) {
-        // GET  /households?householdid=1
+        // GET  /households?householdId=1
         if (householdId != null) {
             return new ResponseEntity(householdRepository.findById(householdId), HttpStatus.OK);
         }

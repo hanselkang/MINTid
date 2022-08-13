@@ -1,6 +1,5 @@
 package com.threeAmigos.services.controllers;
 
-import com.threeAmigos.services.models.Category;
 import com.threeAmigos.services.models.Person;
 import com.threeAmigos.services.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityNotFoundException;
-import java.util.List;
 
 @RestController
 public class PersonController {
@@ -32,7 +30,7 @@ public class PersonController {
             @RequestParam(required = false, name = "person") Long personId
 
     ) {
-        // GET  /persons?personid=1
+        // GET  /persons?personId=1
         if (personId != null) {
             return new ResponseEntity(personRepository.findById(personId), HttpStatus.OK);
         }
