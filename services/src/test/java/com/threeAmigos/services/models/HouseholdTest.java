@@ -10,21 +10,22 @@ import static org.junit.Assert.*;
 public class HouseholdTest {
 
     private Household household;
-    LocalDate date;
 
 
     @Before
     public void setUp() throws Exception {
-        date = LocalDate.of(2022,03,01);
-//        household = new Household(2000000, date);
+        household = new Household("First home");
     }
 
     @Test
-    public void setId() {
+    public void getHousehold_name() {
+        assertEquals("First home", household.getHousehold_name());
     }
 
     @Test
-    public void getId() {
+    public void setHousehold_name() {
+        household.setHousehold_name("Second home");
+        assertEquals("Second home", household.getHousehold_name());
     }
 
 //    @Test

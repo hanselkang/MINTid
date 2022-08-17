@@ -1,7 +1,5 @@
 package com.threeAmigos.services.models;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;

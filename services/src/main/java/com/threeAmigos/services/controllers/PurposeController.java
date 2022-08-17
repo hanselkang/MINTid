@@ -1,9 +1,6 @@
 package com.threeAmigos.services.controllers;
 
-import com.threeAmigos.services.models.Category;
-import com.threeAmigos.services.models.Person;
 import com.threeAmigos.services.models.Purpose;
-import com.threeAmigos.services.repositories.PersonRepository;
 import com.threeAmigos.services.repositories.PurposeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityNotFoundException;
-import java.util.List;
 
 @RestController
 public class PurposeController {
